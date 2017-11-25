@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Job Title" max_length="40" name="x_162936_filteredl_job_title" type="collection">
+        <element label="Jobfamily" max_length="32" name="jobfamily" reference="x_162936_filteredl_job_family" type="reference"/>
+        <element label="name" max_length="255" name="name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="jobfamily"/>
+        </index>
+    </element>
+</database>

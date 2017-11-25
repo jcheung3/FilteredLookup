@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Position" max_length="40" name="x_162936_filteredl_position" type="collection">
+        <element label="End Date" max_length="40" name="end_date" type="glide_date"/>
+        <element label="job family" max_length="32" name="job_family" reference="x_162936_filteredl_job_family" type="reference"/>
+        <element label="job title" max_length="32" name="job_title" reference="x_162936_filteredl_job_title" reference_qual="javascript:&quot;jobfamily=&quot; + current.job_family" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <index name="index">
+            <element name="job_family"/>
+        </index>
+        <index name="index2">
+            <element name="job_title"/>
+        </index>
+    </element>
+</database>
